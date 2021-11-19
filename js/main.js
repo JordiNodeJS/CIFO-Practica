@@ -10,6 +10,7 @@ function colapsalo() {
     x.className = x.className.replace(' w3-show', '')
   }
 }
+// SLIDER
 let slideIndex = 1
 showDivs(slideIndex)
 
@@ -41,6 +42,7 @@ function showDivs(n) {
   dots[slideIndex - 1].className += ' w3-white'
 }
 
+// MODALS
 const modalImgs = document.querySelectorAll('.modal-img')
 console.log(modalImgs)
 for (const modalImg of modalImgs) {
