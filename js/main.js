@@ -1,9 +1,10 @@
-firstContact.addEventListener('submit', validar);
+firstContact.addEventListener('submit', e => {
+  e.preventDefault();
+  return validar();
+});
 email.addEventListener('keyup', () => pasa_valor('email'));
 asunto.addEventListener('keyup', () => pasa_valor('asunto'));
 miedad.addEventListener('keyup', () => pasa_valor('miedad'));
-miedad.addEventListener('keyup', () => pasa_valor('miedad'));
-dni.addEventListener('keyup', () => pasa_valor('dni'));
 dni.addEventListener('keyup', () => pasa_valor('dni'));
 contenido.addEventListener('keyup', () => pasa_valor('contenido'));
 acepto.addEventListener('click', () => pasa_valor('acepto'));
