@@ -47,3 +47,7 @@ html {
 .w3-modal-content.w3-animate-zoom {
   width: 100%;
 }
+
+.w3-display-topleft.w3-black.w3-padding {
+  opacity: 0.6;
+}
