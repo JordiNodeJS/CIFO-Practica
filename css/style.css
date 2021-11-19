@@ -1,11 +1,20 @@
-body {
+html {
   scroll-behavior: smooth;
 }
 
 #gallery img {
-  width: 80%;
+  width: 99%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 8px 80px 160px 0 rgb(122, 12, 12);
+  width: 50%;
 }
 
 .w-100 {
@@ -13,4 +22,21 @@ body {
 }
 .w-1500 {
   max-width: 1564px;
+}
+
+.mySlides {
+  display: none;
+}
+.w3-left,
+.w3-right,
+.w3-badge {
+  cursor: pointer;
+}
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
+.modal-img {
+  cursor: zoom-in;
 }
