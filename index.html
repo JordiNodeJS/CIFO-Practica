@@ -14,7 +14,7 @@
 <body>
   <!-- Navbar (Sits on top) -->
   <div class="w3-top w3-bar w3-white w3-wide w3-padding w3-card w3-hide-small">
-    <a href="#home" class="w3-bar-item w3-button w3-hide-small"><b>MF0491_3</b>Exercici pràctic</a>
+    <a href="#home" class="w3-bar-item w3-button w3-hide-small"><b>MF0491_3</b> Exercici pràctic</a>
 
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
@@ -29,7 +29,7 @@
     <button id="btnColasable" class="w3-button w3-bar-item w3-button"><b>MF0491_3</b> Exercici pràctic</a></button>
     <div id="menudesplagable" class="w3-dropdown-content w3-border">
       <a href="#" class="w3-bar-item w3-button">Gallery</a>
-      <a href="#" class="w3-bar-item w3-button">About</a>
+      <a href="#slider" class="w3-bar-item w3-button">Slider</a>
       <a href="#" class="w3-bar-item w3-button">Contact</a>
     </div>
   </div>
@@ -42,7 +42,7 @@
       <div class="w3-display-middle w3-margin-top w3-center">
         <h1 class="w3-xxlarge w3-text-white w3-wide">
           <span class="w3-padding w3-black w3-opacity-min"><b>MF0491_3</b></span>
-          <span class="w3-hide-small w3-text-light-grey">Exercici pràctic</span>
+          <span class="w3-hide-small w3-text-light-grey"> Exercici pràctic</span>
         </h1>
       </div>
     </div>
@@ -51,20 +51,21 @@
   <!-- Page End -->
 
   <!-- Slider START -->
-  <div class="w3-content  w3-padding-32">
-    <h2 id="slider">Slider</h2>
-  </div>
-
-  <div class="w3-content w3-display-container" style="max-width:800px">
-    <img class="mySlides" src="images/slider/slider-1.jpg" style="width:100%">
-    <img class="mySlides" src="images/slider/slider-2.jpg" style="width:100%">
-    <img class="mySlides" src="images/slider/slider-3.jpg" style="width:100%">
-    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-      <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-      <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  <div id="slider" class="w3-content w-1500">
+    <div class="w3-container w3-padding-32">
+      <h2 id="slider" class="w3-border-bottom w3-border-light-grey w3-padding-16">Slider</h2>
+    </div>
+    <div class="w3-content w3-display-container" style="max-width:800px">
+      <img class="mySlides" src="images/slider/slider-1.jpg">
+      <img class="mySlides" src="images/slider/slider-2.jpg">
+      <img class="mySlides" src="images/slider/slider-3.jpg">
+      <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle w-100">
+        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+      </div>
     </div>
   </div>
 
