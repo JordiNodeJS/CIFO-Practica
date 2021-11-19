@@ -9,7 +9,9 @@
   <title>CIFO La Violeta</title>
   <link rel="stylesheet" href="css/w3css.css">
   <link rel="stylesheet" href="css/style.css">
+  <script defer type="module" src="js/validadoreitor.js"></script>
   <script defer src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -195,54 +197,87 @@
   </section>
 
   <!-- CONTACT -->
-  <section>
-    <div class="w3-container">
+  <section class="w3-container w3-sand w3-panel mt-4 me-4">
 
-      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contacta con nosotros</h1>
+    <h1>Contacta con nosotros</h1>
 
-      <div id="error">
+    <div class="mb-4" id="enviando"></div>
+
+    <form name="formu" method="post" action="https://www.w3schools.com/action_page.php" id="formu">
+      <fieldset class="w3-section">
+        <label for="nombre">Nombre</label>
+        <input class="fc shadow" type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+        <small class="text-muted" id="mostra_nombre">Escribe tu nombre de verdad</small>
+      </fieldset>
+
+      <fieldset class="w3-section">
+        <label for="apellido">Apellidos</label>
+        <input class="fc shadow" type="text" id="apellido" name="apellido" placeholder="Tus apellidos si los tienes">
+        <small class="text-muted" id="mostra_apellido">Escribe tu apellido de verdad</small>
+      </fieldset>
+
+
+
+      <fieldset class="w3-section">
+        <label for="telf">Teléfono</label>
+        <input class="fc shadow" type="text" id="telf" name="telf"
+          placeholder="tu teléfono, el de verdad, al que podamos llamarte y tú contestar">
+        <small class="text-muted" id="mostra_telf">Escribe un teléfono donde poder llamarte</small>
+      </fieldset>
+
+      <fieldset class="w3-section">
+        <label for="email">Dirección de email</label>
+        <input class="fc shadow" type="text" id="email" name="email" placeholder="test@gmail.com" />
+        <small class="text-muted" id="mostra_email">Escribe tu email correctamente</small>
+      </fieldset>
+
+
+      <!-- EDITING HERE -->
+      <fieldset class="w3-section">
+        <label for="fecha">Fecha de nacimiento</label>
+        <input class="fc shadow" type="date" id="fecha" name="fecha" placeholder="el día en que te parieron" />
+        <small class="text-muted" id="mostra_fecha">Escribe la fecha en que te trajeron al mundo.</small>
+      </fieldset>
+
+      <fieldset class="w3-section">
+        <label for="dni">D.N.I</label>
+        <input class="fc shadow" type="text" id="dni" name="dni" placeholder="formato dni: 13546789A" />
+        <small class="text-muted" id="mostra_dni">Escribe tu dni</small>
+      </fieldset>
+
+
+      <fieldset class="w3-section">
+        <label for="asunto">Asunto</label>
+        <input class="fc shadow" type="text" id="asunto" name="asunto" placeholder="Asunto del que se trata">
+        <small class="text-muted" id="mostra_asunto">Escribe el asunto sin añadir números</small>
+      </fieldset>
+      <fieldset class="w3-section">
+        <label for="contenido">¿Qué te gustaría preguntarnos?</label>
+        <textarea class="fc shadow" id="contenido" name="contenido" rows="3"></textarea>
+        <small class="text-muted" id="mostra_contenido">Pregunta sin miedo</small>
+      </fieldset>
+
+
+      <fieldset class="w3-section">
+        <div class="form-check">
+          <input class="input-check" type="checkbox" id="check" name='check'>
+          <label class="form-check-label" for="check">
+            Aceptas las condiciones abusivas que te imponemos si rechistar.
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="mt-4 position-relative">
+        <input type="reset" class="btn btn-danger shadow" id="reset">
+        <input class="btn btn-primary shadow" type="submit" name="enviar" id="enviar">
+        <div class="spinner-border visually-hidden position-absolute top-0 start-50">
+        </div>
       </div>
 
-      <form class="w3-container w3-light-grey w3-padding-16" method="post" id="firstContact" name="firstContact"
-        action="envio.php">
-        <fieldset class="form-group">
-          <label for="email">Dirección de email</label>
-          <input type="text" class="w3-input w3-border-0" id="email" name="email" value="">
-          <small id="mostra1" class="text-muted"></small>
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="asunto">Asunto</label>
-          <input type="text" class="w3-input w3-border-0" id="asunto" name="asunto" value="">
-          <small id="mostra2" class="text-muted"></small>
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="miedad">Fecha de nacimiento:</label>
-          <input type="date" id="miedad" name="miedad" class="w3-input w3-border-0" value="">
-          <small id="mostra4" class="text-muted"></small>
-        </fieldset>
-        <fieldset class="form-group">
-          <label for="dni">Dni</label>
-          <input type="text" class="w3-input w3-border-0" id="dni" name="dni" value="">
-          <small id="mostra5" class="text-muted"></small>
-        </fieldset>
+      </div>
 
-        <fieldset>
-          <label for="contenido">¿Qué te gustaría preguntarnos?</label>
-          <textarea class="w3-input w3-border-0" id="contenido" name="contenido" rows="3" value=""></textarea>
-          <small id="mostra3" class="text-muted"></small>
-        </fieldset>
-        <fieldset>
-          <label for="acepto">Acepto las condiciones del servicio</label>
-          <input name="acepto" id="acepto" type="checkbox" value="" />
-          <small id="mostra6" class="text-muted"></small>
-        </fieldset>
+    </form>
 
-        <button type="submit" name="enviar" id="enviar" class="button">Enviar</button>
-        <button type="button" name="borrar" id="borrar" class="button red">Borrar
-          formulario</button>
-      </form>
-
-    </div>
   </section>
   <!-- CONTACT END -->
 
