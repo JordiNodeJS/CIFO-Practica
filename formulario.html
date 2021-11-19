@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejemplo de validación Javascript</title>
+</head>
+
+<body>
+  <form action="enviar.php" method="post" id="mi_formulario">
+    <p>
+      Nombre: <input type="text" name="nombre">
+    </p>
+    <p>
+      Email: <input type="text" name="email">
+    </p>
+    <p>
+      <input type="submit" value="Enviar">
+    </p>
+  </form>
+
+  <div id="msg"></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      document.getElementById('mi_formulario').addEventListener('submit',
+        manejadorValidacion)
+    });
+
+    function manejadorValidacion(e) {
+      e.preventDefault();
+      var msg = document.getElementById('msg');
+      msg.innerText = '';
+      if (this.querySelector('[name=nombre]').value == '') {
+        console.log('El nombre está vacío');
+        msg.innerText = 'Debes escribir un nombre';
+        return;
+      }
+      if (!validateEmail(this.querySelector('[name=email]').value)) {
+        console.log('El email no es válido');
+        msg.innerText = 'Debes escribir un email   válido';
+        return;
+      }
+      this.submit();
+    }
+
+    function validateEmail(email) {
+      var re =
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{ 1, 3 } \])| (([a - zA - Z\-0 - 9] +\.) +[a - zA - Z]{ 2,})) $ /;
+      return re.test(String(email).toLowerCase());
+    }
+  </script>
+</body>
+
+</html>
