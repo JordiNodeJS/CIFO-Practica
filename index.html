@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+  <!-- v 1.2 -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,7 @@
 <body>
   <header>
     <!-- Navbar (Sits on top) -->
-    <nav class="w3-top w3-bar w3-white w3-wide w3-padding w3-card w3-hide-small">
+    <div role="navigation" class="w3-top w3-bar w3-white w3-wide w3-padding w3-card w3-hide-small">
       <a href="#home" class="w3-bar-item w3-button w3-hide-small"><b>MF0491_3</b> Exercici pràctic</a>
       <!-- Float links to the right. Hide them on small screens -->
       <div class="w3-right w3-hide-small">
@@ -22,8 +23,8 @@
         <a href="#slider" class="w3-bar-item w3-button">Slider</a>
         <a href="#contact" class="w3-bar-item w3-button">Contact</a>
       </div>
-    </nav>
-    <!-- menú colapsable -->
+    </div>
+    <!-- menú colapsable mobile-->
     <nav class="w3-dropdown-click w3-hide-medium w3-hide-large w3-top w3-mobile w3-white w3-wide w3-padding w3-card">
       <button id="btnColasable" class="w3-button w3-bar-item w3-button"><b>MF0491_3</b> Exercici pràctic</a></button>
       <div id="menudesplagable" class="w3-dropdown-content w3-border">
@@ -52,7 +53,7 @@
     <!-- Page End -->
   </header>
   <!-- Slider START -->
-  <div id="slider" class="w3-content w-1500">
+  <section id="slider" class="w3-content w-1500">
     <div class="w3-container w3-padding-32">
       <h2 id="slider" class="w3-border-bottom w3-border-light-grey w3-padding-16">Slider</h2>
     </div>
@@ -68,7 +69,7 @@
         <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Slider END -->
 
@@ -144,62 +145,56 @@
 
 
   <!-- Modales de Gallery -->
-  <div id="modal_01" class="w3-modal">
-
-    <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="images/01.jpg">
+  <section>
+    <div id="modal_01" class="w3-modal">
+      <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="images/01.jpg">
+      </div>
     </div>
-  </div>
-
-  <div id="modal_02" class="w3-modal">
-    <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="images/02.jpg">
+    <div id="modal_02" class="w3-modal">
+      <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="images/02.jpg">
+      </div>
     </div>
-  </div>
-
-  <div id="modal_03" class="w3-modal">
-    <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="images/03.jpg">
+    <div id="modal_03" class="w3-modal">
+      <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="images/03.jpg">
+      </div>
     </div>
-  </div>
-
-  <div id="modal_04" class="w3-modal">
-    <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="images/04.jpg">
+    <div id="modal_04" class="w3-modal">
+      <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="images/04.jpg">
+      </div>
     </div>
-  </div>
-
-  <div id="modal_05" class="w3-modal">
-    <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="images/05.jpg">
+    <div id="modal_05" class="w3-modal">
+      <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="images/05.jpg">
+      </div>
     </div>
-  </div>
-
-  <div id="modal_06" class="w3-modal">
-    <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="images/06.jpg">
+    <div id="modal_06" class="w3-modal">
+      <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="images/06.jpg">
+      </div>
     </div>
-  </div>
-
-  <div id="modal_07" class="w3-modal">
-    <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="images/07.jpg">
+    <div id="modal_07" class="w3-modal">
+      <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="images/07.jpg">
+      </div>
     </div>
-  </div>
-
-  <div id="modal_08" class="w3-modal">
-    <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-      <img src="images/08.jpg">
+    <div id="modal_08" class="w3-modal">
+      <span class="w3-button w3-xlarge w3-display-topright">&times;</span>
+      <div class="w3-modal-content w3-animate-zoom">
+        <img src="images/08.jpg">
+      </div>
     </div>
-  </div>
+  </section>
 
 
 
