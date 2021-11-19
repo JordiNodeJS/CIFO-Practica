@@ -40,3 +40,15 @@ html {
 .modal-img {
   cursor: zoom-in;
 }
+.w3-modal img {
+  width: 100%;
+}
+
+@media screen and (max-width: 513px) {
+  .w3-modal {
+    width: 100%;
+  }
+  .w3-modal img {
+    width: 100%;
+  }
+}
