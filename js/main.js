@@ -1,3 +1,4 @@
+// navbar colapsable
 const $btnColasable = document.querySelector('#btnColasable')
 
 $btnColasable.addEventListener('click', colapsalo)
@@ -12,7 +13,6 @@ function colapsalo() {
 }
 
 // SLIDER
-//  onclick="plusDivs(-1)"
 const $arrow_left = document.querySelector('#arrow_left')
 const $arrow_right = document.querySelector('#arrow_right')
 $arrow_left.addEventListener('click', () => plusDivs(-1))
@@ -79,6 +79,8 @@ for (const w3modal of w3modals) {
 
 //Get the button
 const mybutton = document.getElementById('myBtn')
+const myfooter = document.getElementById('footer')
+const $inner_footer = document.getElementById('inner_footer')
 
 mybutton.addEventListener('click', topFunction)
 
@@ -90,8 +92,12 @@ window.onscroll = function () {
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = 'block'
+    myfooter.style.display = 'block'
+    $inner_footer.classList.add('w3-animate-bottom')
   } else {
     mybutton.style.display = 'none'
+    myfooter.style.display = 'none'
+    $inner_footer.classList.remove('w3-animate-bottom')
   }
 }
 

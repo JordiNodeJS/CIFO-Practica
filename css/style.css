@@ -249,7 +249,9 @@ fieldset {
 #contact {
   margin-bottom: 7rem;
 }
-footer {
+
+#footer {
+  display: none;
   position: fixed;
   padding-top: 1.2rem;
   left: 0;

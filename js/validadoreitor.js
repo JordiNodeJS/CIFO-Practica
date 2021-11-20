@@ -65,10 +65,10 @@ const validar = event => {
 
 // añado los listeners al formulario
 const listeners = [
+  form.fecha,
   form.nombre,
   form.apellido,
   form.email,
-  form.fecha,
   form.telf,
   form.dni,
   form.asunto,
@@ -76,6 +76,8 @@ const listeners = [
   form.check,
 ]
 for (const listener of listeners) listener.addEventListener('keyup', validar)
+
+listeners[0].addEventListener('click', validar)
 
 // Evito que el formulario se envíe sin rellenar
 form.formu.addEventListener('submit', event => {
@@ -101,14 +103,15 @@ form.formu.addEventListener('submit', event => {
     }, 1000)
   }
 })
-// Reseteo del campo de formulario
+// Reseteo del campo de formulario y de la mente del usuario (parte de la mágia oscura)
 reset.addEventListener('click', () => {
   const smalls = document.querySelectorAll('.text-danger')
   const inputs = document.querySelectorAll('.is-invalid')
   for (const small of smalls) small.classList.remove('text-danger')
   for (const input of inputs) {
     input.classList.remove('is-invalid')
-    input.placeholder = 'Campos reseteados, prueba de nuevo'
+    input.placeholder =
+      'Campos reseteados, prueba de nuevo si tienes el ánimo para ello.'
   }
 })
 
