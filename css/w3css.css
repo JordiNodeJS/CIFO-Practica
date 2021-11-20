@@ -941,17 +941,17 @@ a {
   }
 }
 .w3-animate-fading {
-  animation: fading 10s infinite;
+  animation: fading 0.2s normal;
 }
 @keyframes fading {
   0% {
-    opacity: 0;
+    opacity: 0.8;
   }
   50% {
-    opacity: 1;
+    opacity: 0.5;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 .w3-animate-opacity {
