@@ -198,12 +198,10 @@
   </section>
 
   <!-- CONTACT -->
-
-
-  <section id="contact" class="w3-container w w3-sand w3-margin">
+  <section id="contact" class="w3-container w w3-margin">
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contacta con nosotros</h1>
     <div class="mb-4" id="enviando"></div>
-    <form name="formu" method="post" action="https://www.w3schools.com/action_page.php" id="formu">
+    <form class="wrapper" name="formu" method="post" action="https://www.w3schools.com/action_page.php" id="formu">
       <fieldset class="w3-section">
         <label for="nombre">Nombre</label>
         <input class="fc shadow" type="text" id="nombre" name="nombre" placeholder="Tu nombre">
@@ -216,8 +214,7 @@
       </fieldset>
       <fieldset class="w3-section">
         <label for="telf">Teléfono</label>
-        <input class="fc shadow" type="text" id="telf" name="telf"
-          placeholder="tu teléfono, el de verdad, al que podamos llamarte y tú contestar">
+        <input class="fc shadow" type="text" id="telf" name="telf" placeholder="tu teléfono">
         <small class="text-muted" id="mostra_telf">Escribe un teléfono donde poder llamarte</small>
       </fieldset>
       <fieldset class="w3-section">
@@ -225,7 +222,6 @@
         <input class="fc shadow" type="text" id="email" name="email" placeholder="test@gmail.com" />
         <small class="text-muted" id="mostra_email">Escribe tu email correctamente</small>
       </fieldset>
-      <!-- EDITING HERE -->
       <fieldset class="w3-section">
         <label for="fecha">Fecha de nacimiento</label>
         <input class="fc shadow" type="date" id="fecha" name="fecha" placeholder="el día en que te parieron" />
@@ -233,7 +229,7 @@
       </fieldset>
       <fieldset class="w3-section">
         <label for="dni">D.N.I</label>
-        <input class="fc shadow" type="text" id="dni" name="dni" placeholder="formato dni: 13546789A" />
+        <input class="fc shadow" type="text" id="dni" name="dni" placeholder="13546789A" />
         <small class="text-muted" id="mostra_dni">Escribe tu dni</small>
       </fieldset>
       <fieldset class="w3-section">

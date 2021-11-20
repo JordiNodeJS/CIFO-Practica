@@ -461,12 +461,14 @@ a {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .w3-modal-content {
-  margin: auto;
+  margin: 0;
   background-color: #fff;
   position: relative;
+  top: 0;
   padding: 0;
   outline: 0;
-  width: 600px;
+  border: 1px solid black;
+  width: 100%;
 }
 .w3-bar {
   width: 100%;

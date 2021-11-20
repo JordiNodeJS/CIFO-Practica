@@ -244,8 +244,24 @@ fieldset {
   .w {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .wrapper input,
+  .wrapper textarea,
+  input:not[type='check'] {
+    width: 20rem;
+  }
+  fieldset {
+    width: 400px;
   }
 }
+
 #contact {
   margin-bottom: 7rem;
 }
