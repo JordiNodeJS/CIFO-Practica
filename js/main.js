@@ -1,33 +1,32 @@
-// navbar colapsable
-import colapsalo from './colapsao.js'
+import colapsalo, { closeColapsable } from './colapsao.js'
 import spider from './spider.js'
+import { scrollFunction, topFunction } from './scrollToTop.js'
 import {
   $btnColasable,
   modalImgs,
   mybutton,
-  myfooter,
-  $inner_footer,
   w3modals,
+  sections,
 } from './doom.js'
 
+// NAVBAR que colapsa cuando se ajusta al tamaño mobile.
 $btnColasable.addEventListener('click', colapsalo)
+sections.forEach(section => section.addEventListener('click', closeColapsable))
 
-// MODALS
-console.log(modalImgs)
+// MODALS a to'as images
 for (const modalImg of modalImgs) {
   modalImg.addEventListener('click', e => {
     let idModal = `#modal_${e.target.dataset.modal}`
-    console.log(idModal)
     document.querySelector(idModal).style.display = 'block'
   })
 }
-
+// cerrando MODAL·GLSx
 for (const w3modal of w3modals) {
   w3modal.addEventListener('click', () => (w3modal.style.display = 'none'))
 }
 
-//Getting the button, footer, inner_footer y si te descuidas el bocadillo de la tarde.
-
+// SCROLL TO THE TOP OF THE TOP TOP.
+//Pa'rriba que te lleva
 mybutton.addEventListener('click', topFunction)
 
 // si el user va pa'bajo 300pigsel·les desde'l  top de la güep, le enseñas el botoncito ese tan chulo
@@ -35,25 +34,5 @@ window.onscroll = function () {
   scrollFunction()
 }
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 300 ||
-    document.documentElement.scrollTop > 300
-  ) {
-    mybutton.style.display = 'block'
-    myfooter.style.display = 'block'
-    $inner_footer.classList.add('w3-animate-bottom')
-  } else {
-    mybutton.style.display = 'none'
-    myfooter.style.display = 'none'
-    $inner_footer.classList.remove('w3-animate-bottom')
-  }
-}
-
-// cuando el usuario clicke en el botón ese tan majo que lo lleve pa'rriba
-function topFunction() {
-  document.body.scrollTop = 0
-  document.documentElement.scrollTop = 0
-}
-
+// SLIDER que no spider 😛
 spider()
