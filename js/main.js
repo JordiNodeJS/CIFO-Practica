@@ -1,6 +1,6 @@
 import colapsalo, { closeColapsable } from './colapsao.js'
-import spider from './spider.js'
-import { scrollFunction, topFunction } from './scrollToTop.js'
+import desliza from './desliza.js'
+import scrolea, { parriba } from './scrollToTop.js'
 import {
   $btnColasable,
   modalImgs,
@@ -27,12 +27,10 @@ for (const w3modal of w3modals) {
 
 // SCROLL TO THE TOP OF THE TOP TOP.
 //Pa'rriba que te lleva
-mybutton.addEventListener('click', topFunction)
+mybutton.addEventListener('click', parriba)
 
 // si el user va pa'bajo 300pigsel·les desde'l  top de la güep, le enseñas el botoncito ese tan chulo
-window.onscroll = function () {
-  scrollFunction()
-}
+window.onscroll = () => scrolea()
 
-// SLIDER que no spider 😛
-spider()
+// SLIDER
+desliza()

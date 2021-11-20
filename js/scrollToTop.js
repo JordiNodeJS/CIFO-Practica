@@ -1,5 +1,5 @@
 import { mybutton, myfooter, $inner_footer } from './doom.js'
-export function scrollFunction() {
+export default function () {
   if (
     document.body.scrollTop > 300 ||
     document.documentElement.scrollTop > 300
@@ -15,7 +15,7 @@ export function scrollFunction() {
 }
 
 // cuando el usuario clicke en el botón ese tan majo que lo lleve pa'rriba
-export function topFunction() {
+export function parriba() {
   document.body.scrollTop = 0
   document.documentElement.scrollTop = 0
 }
