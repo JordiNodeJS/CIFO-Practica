@@ -33,7 +33,7 @@ export default function () {
       dots[i].className = dots[i].className.replace(' w3-white', '')
 
     x[slideIndex - 1].style.display = 'block'
-    x[slideIndex - 1].classList.add('w3-animate-fading')
+    x[slideIndex - 1].classList.add('animatron-fading')
     dots[slideIndex - 1].className += ' w3-white'
   }
 }

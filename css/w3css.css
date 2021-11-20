@@ -943,11 +943,11 @@ a {
   }
 }
 .w3-animate-fading {
-  animation: fading 0.2s normal;
+  animation: fading 0.2s infinite;
 }
 @keyframes fading {
   0% {
-    opacity: 0.8;
+    opacity: 0;
   }
   50% {
     opacity: 0.5;

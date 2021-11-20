@@ -42,6 +42,26 @@ html {
   width: 13px;
   padding: 0;
 }
+/* Slider main frame */
+.max-width {
+  max-width: 800px;
+}
+/* animación del slider */
+.animatron-fading {
+  animation: fading 0.25s normal;
+}
+@keyframes fading {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .modal-img {
   cursor: zoom-in;
 }
