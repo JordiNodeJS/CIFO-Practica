@@ -10,7 +10,21 @@ function colapsalo() {
     x.className = x.className.replace(' w3-show', '')
   }
 }
+
 // SLIDER
+//  onclick="plusDivs(-1)"
+const $arrow_left = document.querySelector('#arrow_left')
+const $arrow_right = document.querySelector('#arrow_right')
+$arrow_left.addEventListener('click', () => plusDivs(-1))
+$arrow_right.addEventListener('click', () => plusDivs(1))
+
+const demos = document.querySelectorAll('.demo')
+
+for (let i = 0; i < demos.length; i++) {
+  const element = demos[i]
+  element.addEventListener('click', () => currentDiv(i + 1))
+}
+
 let slideIndex = 1
 showDivs(slideIndex)
 
@@ -42,6 +56,8 @@ function showDivs(n) {
   dots[slideIndex - 1].className += ' w3-white'
 }
 
+;(function () {})()
+
 // MODALS
 const modalImgs = document.querySelectorAll('.modal-img')
 console.log(modalImgs)
@@ -59,4 +75,28 @@ const w3modals = document.querySelectorAll('.w3-modal')
 
 for (const w3modal of w3modals) {
   w3modal.addEventListener('click', () => (w3modal.style.display = 'none'))
+}
+
+//Get the button
+const mybutton = document.getElementById('myBtn')
+
+mybutton.addEventListener('click', topFunction)
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction()
+}
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = 'block'
+  } else {
+    mybutton.style.display = 'none'
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0
+  document.documentElement.scrollTop = 0
 }

@@ -113,36 +113,36 @@ reset.addEventListener('click', () => {
 })
 
 // Zona de testeo, se puede elimitar
-test.addEventListener('click', event => {
-  !mail() ||
-  !asunto() ||
-  !contenido() ||
-  !telf() ||
-  !apellido() ||
-  !fecha() ||
-  !validaDNI(form.formu.dni.value) ||
-  !form.check.checked
-    ? styling(false, msg.error.toLocaleUpperCase(), [enviando, enviando])
-    : styling(true, msg.valido.toLocaleUpperCase(), [enviando, enviando])
-})
-test.addEventListener('click', event => {
-  if (
-    !mail() ||
-    !asunto() ||
-    !contenido() ||
-    !telf() ||
-    !apellido() ||
-    !fecha() ||
-    !form.check.checked
-  ) {
-    console.log(
-      telf(),
-      contenido(),
-      mail(),
-      asunto(),
-      apellido(),
-      fecha(),
-      form.check.checked
-    )
-  }
-})
+// test.addEventListener('click', event => {
+//   !mail() ||
+//   !asunto() ||
+//   !contenido() ||
+//   !telf() ||
+//   !apellido() ||
+//   !fecha() ||
+//   !validaDNI(form.formu.dni.value) ||
+//   !form.check.checked
+//     ? styling(false, msg.error.toLocaleUpperCase(), [enviando, enviando])
+//     : styling(true, msg.valido.toLocaleUpperCase(), [enviando, enviando])
+// })
+// test.addEventListener('click', event => {
+//   if (
+//     !mail() ||
+//     !asunto() ||
+//     !contenido() ||
+//     !telf() ||
+//     !apellido() ||
+//     !fecha() ||
+//     !form.check.checked
+//   ) {
+//     console.log(
+//       telf(),
+//       contenido(),
+//       mail(),
+//       asunto(),
+//       apellido(),
+//       fecha(),
+//       form.check.checked
+//     )
+//   }
+// })

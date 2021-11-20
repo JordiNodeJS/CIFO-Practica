@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CIFO La Violeta</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/w3css.css">
   <link rel="stylesheet" href="css/style.css">
   <script defer type="module" src="js/validadoreitor.js"></script>
@@ -30,9 +31,9 @@
     <nav class="w3-dropdown-click w3-hide-medium w3-hide-large w3-top w3-mobile w3-white w3-wide w3-padding w3-card">
       <button id="btnColasable" class="w3-button w3-bar-item w3-button"><b>MF0491_3</b> Exercici pràctic</a></button>
       <div id="menudesplagable" class="w3-dropdown-content w3-border">
-        <a href="#" class="w3-bar-item w3-button">Gallery</a>
+        <a href="#projects" class="w3-bar-item w3-button">Gallery</a>
         <a href="#slider" class="w3-bar-item w3-button">Slider</a>
-        <a href="#" class="w3-bar-item w3-button">Contact</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
       </div>
     </nav>
 
@@ -65,11 +66,11 @@
       <img class="mySlides" src="images/slider/slider-2.jpg">
       <img class="mySlides" src="images/slider/slider-3.jpg">
       <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle w-100">
-        <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-        <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-        <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        <div class="w3-left w3-hover-text-khaki" id="arrow_left">&#10094;</div>
+        <div class="w3-right w3-hover-text-khaki" id="arrow_right">&#10095;</div>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-white"></span>
       </div>
     </div>
   </section>
@@ -197,55 +198,44 @@
   </section>
 
   <!-- CONTACT -->
-  <section class="w3-container w3-sand w3-panel mt-4 me-4">
 
-    <h1>Contacta con nosotros</h1>
 
+  <section id="contact" class="w3-container w w3-sand w3-margin">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contacta con nosotros</h1>
     <div class="mb-4" id="enviando"></div>
-
     <form name="formu" method="post" action="https://www.w3schools.com/action_page.php" id="formu">
       <fieldset class="w3-section">
         <label for="nombre">Nombre</label>
         <input class="fc shadow" type="text" id="nombre" name="nombre" placeholder="Tu nombre">
         <small class="text-muted" id="mostra_nombre">Escribe tu nombre de verdad</small>
       </fieldset>
-
       <fieldset class="w3-section">
         <label for="apellido">Apellidos</label>
         <input class="fc shadow" type="text" id="apellido" name="apellido" placeholder="Tus apellidos si los tienes">
         <small class="text-muted" id="mostra_apellido">Escribe tu apellido de verdad</small>
       </fieldset>
-
-
-
       <fieldset class="w3-section">
         <label for="telf">Teléfono</label>
         <input class="fc shadow" type="text" id="telf" name="telf"
           placeholder="tu teléfono, el de verdad, al que podamos llamarte y tú contestar">
         <small class="text-muted" id="mostra_telf">Escribe un teléfono donde poder llamarte</small>
       </fieldset>
-
       <fieldset class="w3-section">
         <label for="email">Dirección de email</label>
         <input class="fc shadow" type="text" id="email" name="email" placeholder="test@gmail.com" />
         <small class="text-muted" id="mostra_email">Escribe tu email correctamente</small>
       </fieldset>
-
-
       <!-- EDITING HERE -->
       <fieldset class="w3-section">
         <label for="fecha">Fecha de nacimiento</label>
         <input class="fc shadow" type="date" id="fecha" name="fecha" placeholder="el día en que te parieron" />
         <small class="text-muted" id="mostra_fecha">Escribe la fecha en que te trajeron al mundo.</small>
       </fieldset>
-
       <fieldset class="w3-section">
         <label for="dni">D.N.I</label>
         <input class="fc shadow" type="text" id="dni" name="dni" placeholder="formato dni: 13546789A" />
         <small class="text-muted" id="mostra_dni">Escribe tu dni</small>
       </fieldset>
-
-
       <fieldset class="w3-section">
         <label for="asunto">Asunto</label>
         <input class="fc shadow" type="text" id="asunto" name="asunto" placeholder="Asunto del que se trata">
@@ -256,8 +246,6 @@
         <textarea class="fc shadow" id="contenido" name="contenido" rows="3"></textarea>
         <small class="text-muted" id="mostra_contenido">Pregunta sin miedo</small>
       </fieldset>
-
-
       <fieldset class="w3-section">
         <div class="form-check">
           <input class="input-check" type="checkbox" id="check" name='check'>
@@ -266,7 +254,6 @@
           </label>
         </div>
       </fieldset>
-
       <div class="mt-4 position-relative">
         <input type="reset" class="btn btn-danger shadow" id="reset">
         <input class="btn btn-primary shadow" type="submit" name="enviar" id="enviar">
@@ -274,17 +261,25 @@
         </div>
       </div>
 
-      </div>
-
     </form>
-
   </section>
   <!-- CONTACT END -->
 
 
+  <footer>
 
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <button id="myBtn" title="Go to top">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z" />
+      </svg>
+    </button>
 
-  </div>
+  </footer>
 
 </body>
 
