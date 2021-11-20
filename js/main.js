@@ -1,10 +1,20 @@
 // navbar colapsable
 import colapsalo from './colapsao.js'
-const $btnColasable = document.querySelector('#btnColasable')
+import {
+  $btnColasable,
+  modalImgs,
+  mybutton,
+  myfooter,
+  $inner_footer,
+  w3modals,
+  $arrow_left,
+  $arrow_right,
+  demos,
+} from './doom.js'
+
 $btnColasable.addEventListener('click', colapsalo)
 
 // MODALS
-const modalImgs = document.querySelectorAll('.modal-img')
 console.log(modalImgs)
 for (const modalImg of modalImgs) {
   modalImg.addEventListener('click', e => {
@@ -14,16 +24,11 @@ for (const modalImg of modalImgs) {
   })
 }
 
-const w3modals = document.querySelectorAll('.w3-modal')
-
 for (const w3modal of w3modals) {
   w3modal.addEventListener('click', () => (w3modal.style.display = 'none'))
 }
 
 //Getting the button, footer, inner_footer y si te descuidas el bocadillo de la tarde.
-const mybutton = document.getElementById('myBtn')
-const myfooter = document.getElementById('footer')
-const $inner_footer = document.getElementById('inner_footer')
 
 mybutton.addEventListener('click', topFunction)
 
@@ -54,10 +59,6 @@ function topFunction() {
 }
 
 // SLIDER, que no spider
-const $arrow_left = document.querySelector('#arrow_left')
-const $arrow_right = document.querySelector('#arrow_right')
-const demos = document.querySelectorAll('.demo')
-
 $arrow_left.addEventListener('click', () => plusDivs(-1))
 $arrow_right.addEventListener('click', () => plusDivs(1))
 
@@ -75,6 +76,7 @@ function plusDivs(n) {
 function currentDiv(n) {
   showDivs((slideIndex = n))
 }
+// peta al exportarlo
 function showDivs(n) {
   let i
   let x = document.getElementsByClassName('mySlides')

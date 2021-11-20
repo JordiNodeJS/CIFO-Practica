@@ -7,7 +7,7 @@ export default {
   asunto: 'Asunto no del todo correcto',
   contenido: 'Escribe algo, hombre',
   check:
-    'Si no aceptas las condiciones no queremos saber nada de ti. Punto pelota.',
+    'Si no aceptas las condiciones no queremos saber nada de ti. Así de duros somos!',
   dni1: 'Dni erroneo, la letra del NIF no se corresponde',
   dni2: 'Dni correcto',
   dni3: 'Dni erroneo, formato no válido',
