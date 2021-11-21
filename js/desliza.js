@@ -1,6 +1,6 @@
 import { $arrow_left, $arrow_right, demos } from './doom.js'
+// SLIDER, que no spider
 export default function () {
-  // SLIDER, que no spider
   $arrow_left.addEventListener('click', () => plusDivs(-1))
   $arrow_right.addEventListener('click', () => plusDivs(1))
 
@@ -17,23 +17,24 @@ export default function () {
   function currentDiv(n) {
     showDivs((slideIndex = n))
   }
-  // peta al exportarlo
+
   function showDivs(n) {
     let i
-    let x = document.getElementsByClassName('mySlides')
+    let slider = document.getElementsByClassName('mySlides')
     let dots = document.getElementsByClassName('demo')
-    if (n > x.length) {
+    if (n > slider.length) {
       slideIndex = 1
     }
-    if (n < 1) slideIndex = x.length
+    if (n < 1) slideIndex = slider.length
+    // console.log(slider)
+    // for (i = 0; i < slider.length; i++) slider[i].style.display = 'none'
+    // Array.from(slider).forEach(img => (img.style.display = 'none'))
+    for (const img of slider) img.style.display = 'none'
+    for (const dot of dots)
+      dot.className = dot.className.replace(' w3-white', '')
 
-    for (i = 0; i < x.length; i++) x[i].style.display = 'none'
-
-    for (i = 0; i < dots.length; i++)
-      dots[i].className = dots[i].className.replace(' w3-white', '')
-
-    x[slideIndex - 1].style.display = 'block'
-    x[slideIndex - 1].classList.add('animatron-fading')
+    slider[slideIndex - 1].style.display = 'block'
+    slider[slideIndex - 1].classList.add('animatron-fading')
     dots[slideIndex - 1].className += ' w3-white'
   }
 }
