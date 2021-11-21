@@ -1,5 +1,5 @@
 import colapsalo, { closeColapsable } from './colapsao.js'
-import desliza from './desliza.js'
+import Swiper from './swiper-bundle.esm.browser.min.js'
 import scrolea, { parriba } from './scrollToTop.js'
 import {
   $btnColasable,
@@ -13,6 +13,28 @@ import {
 $btnColasable.addEventListener('click', colapsalo)
 sections.forEach(section => section.addEventListener('click', closeColapsable))
 
+// SLIDER con swiper
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+})
 // MODALS a to'as images
 for (const modalImg of modalImgs) {
   modalImg.addEventListener('click', e => {
@@ -33,4 +55,3 @@ mybutton.addEventListener('click', parriba)
 window.onscroll = () => scrolea()
 
 // SLIDER
-desliza()
