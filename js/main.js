@@ -30,11 +30,16 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
+  effect: 'cube',
+  grabCursor: true,
+  cubeEffect: {
+    shadow: true,
+    slideShadows: true,
+    shadowOffset: 20,
+    shadowScale: 0.94,
+  },
 })
+
 // MODALS a to'as images
 for (const modalImg of modalImgs) {
   modalImg.addEventListener('click', e => {

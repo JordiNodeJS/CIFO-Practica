@@ -3,6 +3,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* slider */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
 #slider img {
   width: 100%;
 }
